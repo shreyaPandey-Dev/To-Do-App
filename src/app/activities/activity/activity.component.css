@@ -1,0 +1,19 @@
+.mat-list-option{
+  color: antiquewhite;
+  font-weight: bold;
+  font-size: 5vh;
+}
+.mat-list-option[aria-selected="true"] {
+        color : red;
+        text-decoration: line-through;
+        font-weight: bold;
+  }
+.mat-card{
+  background-color: transparent;
+  color: antiquewhite;
+  font-weight: bold;
+
+}
+.matInput{
+  color: antiquewhite;
+}

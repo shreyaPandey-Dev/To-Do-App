@@ -1,0 +1,27 @@
+<mat-card >
+    <form>
+        <mat-form-field style="color: white;">
+            <input
+                matInput
+                #activity
+                placeholder="Add new activity"
+                (keyup.enter)="addActivity(activity.value); activity.value=''"></mat-form-field>
+            <button
+                mat-raised-button
+                color="primary"
+                (click)="addActivity(activity.value); activity.value=''">Add Activity</button>
+            <button mat-raised-button color="primary" (click)="clearActivity(activity)">Remove all</button>
+            <br>
+                <mat-selection-list
+                    [(ngModel)]="selectedOptions" name="activityName"
+                    (ngModelChange)="onNgModelChange($event)"
+                    class="checkedActivity">
+                    <mat-list-option
+                        class="option"
+                        *ngFor="let activity of activityList"
+                        [value]="activity">
+                        {{activity}}
+                    </mat-list-option>
+                </mat-selection-list>
+            </form>
+        </mat-card>
